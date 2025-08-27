@@ -1,0 +1,49 @@
+.notes-panel {
+    width: 320px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    padding: 16px;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.05);
+    height: calc(100vh - 50px);
+    /* adjust for topbar height */
+    position: fixed;
+    right: 0;
+    top: 50px;
+    overflow-y: auto;
+}
+
+.notes-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.note-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #fafafa;
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.note-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.note-date {
+    color: #888;
+}
+
+.note-content {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+}
