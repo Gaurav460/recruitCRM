@@ -1,69 +1,47 @@
-# React + TypeScript + Vite
+# RecruitCRM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React + TypeScript single-page application (SPA)** that replicates a candidate management system UI.  
+The app includes sidebar navigation, a topbar with actions, candidate profile details, assigned jobs list, and a notes panel – all styled with **plain CSS** (no frameworks).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- **Sidebar Navigation** – fixed vertical menu for navigation.
+- **Topbar** – search bar, request profile update button, and user avatars.
+- **Candidate Profile Section** – shows candidate details like name, role, email, phone, current org, salary, experience, etc.
+- **Tabs Section** – navigation between different views (All Details, Assigned Jobs, Related Emails, etc.).
+- **Assigned Jobs Table** – displays jobs assigned to the candidate with status and actions.
+- **Notes Panel** – right-side panel for adding and viewing candidate notes.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tech Stack
+- **React 18 + TypeScript**
+- **Vite** (development environment)
+- **Plain CSS** (no CSS libraries/frameworks used)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📂 Project Structure
+recruitCRM/
+├── src/
+│ ├── components/
+│ │ ├── Sidebar.tsx
+│ │ ├── Sidebar.css
+│ │ ├── Topbar.tsx
+│ │ ├── Topbar.css
+│ │ ├── CandidateProfile.tsx
+│ │ ├── CandidateProfile.css
+│ │ ├── Tabs.tsx
+│ │ ├── Tabs.css
+│ │ ├── AssignedJobs.tsx
+│ │ ├── AssignedJobs.css
+│ │ ├── Notes.tsx
+│ │ ├── Notes.css
+│ ├── App.tsx
+│ ├── main.tsx
+│ ├── index.css
+├── public/
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
